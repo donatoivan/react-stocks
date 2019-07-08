@@ -1,0 +1,96 @@
+.login-form {
+  margin-top: 45px;
+}
+
+.main-header {
+  font-size: 40px !important;
+}
+
+.font-white {
+  color: #FFF !important;
+}
+
+.nav {
+  background-color: #c475f6 !important;
+}
+
+.link {
+  color: white !important;
+}
+
+.landing {
+  background-color: #c475f6;
+  padding-bottom: 30px;
+}
+
+.purple {
+  background-color: #c475f6 !important;
+}
+
+.register {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar-home {
+  background-color: #9c73f6 !important;
+}
+
+.navbar-portfolio {
+  background-color: #7681f6 !important;
+}
+
+.navbar-buy {
+  background-color: #3996b2 !important;
+}
+
+.navbar-sell {
+  background-color: #2a69fc !important;
+}
+
+.navbar-history {
+  background-color: #173a8b !important;
+
+}
+
+.ui.menu {
+  margin: 0;
+}
+
+.portfolio-button-group {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important; 
+  margin-top: 30px;
+}
+
+.port-button {
+  width: 200px;
+  margin-top: 15px !important;
+}
+
+.bd-zero {
+  border: 0 !important;
+}
+
+.error-messages {
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.portfolio-display {
+  display: flex !important;
+  height: 70%;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio-list-left {
+  list-style: none;
+}
