@@ -19,7 +19,7 @@ class App extends React.Component {
   register = async (userCreds) => {
       
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/users', userCreds)
+      const response = await axios.post('/api/users', userCreds)
       console.log(response)
       const token = response.data.token
       localStorage.setItem('token', token)
@@ -41,7 +41,7 @@ class App extends React.Component {
     // console.log(this.state.error.message)
     // check the credentials
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/auth', userCreds)
+      const response = await axios.post('/api/auth', userCreds)
       console.log(response)
       const token = response.data.token
       localStorage.setItem('token', token)
@@ -60,7 +60,7 @@ class App extends React.Component {
   async componentDidMount() {
     try {
       const token = localStorage.getItem('token')
-      const authentication = await axios.get('http://127.0.0.1:5000/api/auth', {headers: { 'x-auth-token': token }})
+      const authentication = await axios.get('/api/auth', {headers: { 'x-auth-token': token }})
       console.log(authentication)
       console.log('authenticated')
       

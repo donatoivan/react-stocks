@@ -15,7 +15,7 @@ class History extends React.Component {
   componentDidMount = async () => {
     console.log('mounting history')
     const token = localStorage.getItem('token')
-    const response = await axios.get('http://127.0.0.1:5000/api/profile/me', {headers: { 'x-auth-token': token }})
+    const response = await axios.get('/api/profile/me', {headers: { 'x-auth-token': token }})
     console.log(response.data)
     this.setState({
       user: response.data.user,
