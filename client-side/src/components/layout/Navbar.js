@@ -6,7 +6,7 @@ const navbarColour = (pathname) => {
     case '/home':
       return 'navbar-home';
     case '/portfolio':
-      return 'navbar-portfolio';
+      return 'navbar-home';
     case '/buy':
       return 'navbar-buy';
     case '/sell':
