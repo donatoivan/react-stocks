@@ -56,7 +56,7 @@ class Sell extends React.Component {
     const token = localStorage.getItem('token')
     const id = this.state.selectedStock._id
     // const symbol = this.state.selectedStock.symbol
-    const response = await axios.delete(`http://localhost:5000/api/profile/addstock/${id}`, {headers: { 'x-auth-token': token }})
+    const response = await axios.delete(`/api/profile/addstock/${id}`, {headers: { 'x-auth-token': token }})
     console.log(response);
     const stockToSell = {
       symbol: this.state.selectedStock.symbol,
@@ -65,7 +65,7 @@ class Sell extends React.Component {
       purchasePrice: this.state.selectedStock.purchasePrice,
       soldPrice: this.state.upToDateStockInfo.latestPrice
     }
-    const soldResponse = await axios.put('http://localhost:5000/api/profile/soldstock', stockToSell, {headers: { 'x-auth-token': token }} )
+    const soldResponse = await axios.put('/api/profile/soldstock', stockToSell, {headers: { 'x-auth-token': token }} )
     console.log(soldResponse)
     this.props.history.push('/history')
     // const response = await axios.delete(`http://localhost:5000/stocks/${symbol}`)
