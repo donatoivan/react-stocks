@@ -17,32 +17,33 @@ const navbarColour = (pathname) => {
       return ''
   }
 }
+
 const Navbar = (props) => {
   console.log(props.history.location.pathname)
   if (props.authentication) {
     return(
-      <div className={`ui secondary pointing menu ${navbarColour(props.history.location.pathname)} bd-zero`}>
-      <Link to="/" className="item link">
-        Home
-      </Link>
-      <Link to="/portfolio" className="item font-white">
-        Portfolio
-      </Link>
-      <Link to="/buy" className="item font-white">
-        Buy
-      </Link>
-      <Link to="/sell" className="item font-white">
-        Sell
-      </Link>
-      <Link to="/history" className="item font-white">
-        History
-      </Link>
-      <div className="right menu">
-        <Link to="/" onClick={props.logout} className="ui item font-white">
-          Logout
+      <div className={`${navbarColour(props.history.location.pathname)} sidebar`}>
+        <Link to="/" className="item link">
+          Home
         </Link>
+        <Link to="/portfolio" className="item font-white">
+          Portfolio
+        </Link>
+        <Link to="/buy" className="item font-white">
+          Buy
+        </Link>
+        <Link to="/sell" className="item font-white">
+          Sell
+        </Link>
+        <Link to="/history" className="item font-white">
+          History
+        </Link>
+        <div className="right menu">
+          <Link to="/" onClick={props.logout} className="ui item font-white">
+            Logout
+          </Link>
+        </div>
       </div>
-    </div>
     )
   } else {
     return(

@@ -19,7 +19,7 @@ class App extends React.Component {
   register = async (userCreds) => {
       
     try {
-      const response = await axios.post('/api/users', userCreds)
+      const response = await axios.post('http://localhost:5000/api/users', userCreds)
       console.log(response)
       const token = response.data.token
       localStorage.setItem('token', token)
@@ -41,7 +41,7 @@ class App extends React.Component {
     // console.log(this.state.error.message)
     // check the credentials
     try {
-      const response = await axios.post('/api/auth', userCreds)
+      const response = await axios.post('http://localhost:5000/api/auth', userCreds)
       console.log(response)
       const token = response.data.token
       localStorage.setItem('token', token)
@@ -60,7 +60,7 @@ class App extends React.Component {
   async componentDidMount() {
     try {
       const token = localStorage.getItem('token')
-      const authentication = await axios.get('/api/auth', {headers: { 'x-auth-token': token }})
+      const authentication = await axios.get('http://localhost:5000/api/auth', {headers: { 'x-auth-token': token }})
       console.log(authentication)
       console.log('authenticated')
       
@@ -87,7 +87,7 @@ class App extends React.Component {
     const { register, login, logout } = this
     return(
       <BrowserRouter>
-        <>
+        <div className="ui container">
           <Navbar authentication={authentication} logout={logout} />
           <Route exact path="/" render={(history) => {
             return <Landing authentication={authentication} history={history} />
@@ -119,7 +119,7 @@ class App extends React.Component {
                 />
               {/* </section> */}
             </Switch>
-        </>
+        </div>
       </BrowserRouter>
     )
   }

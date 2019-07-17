@@ -42,7 +42,7 @@ class Buy extends React.Component {
     };
     const token = localStorage.getItem('token')
 
-    axios.put('http://127.0.0.1:5000/api/profile/addstock', stock, {headers: { 'x-auth-token': token }})
+    axios.put('/api/profile/addstock', stock, {headers: { 'x-auth-token': token }})
       .then(res => {
         console.log(res);
         console.log(res.data);

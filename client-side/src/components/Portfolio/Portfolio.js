@@ -18,7 +18,7 @@ class Portfolio extends React.Component {
     try {
       console.log('mounting portfolio')
       const token = localStorage.getItem('token')
-      const response = await axios.get('/api/profile/me', {headers: { 'x-auth-token': token }})
+      const response = await axios.get('http://localhost:5000/api/profile/me', {headers: { 'x-auth-token': token }})
       console.log(response.data)
       this.setState({
         user: response.data.user,
@@ -77,13 +77,13 @@ class Portfolio extends React.Component {
 
       if (this.state.showing === false) {
         return(
-          <div className="navbar-portfolio" style={{height: 'calc(100vh - 4vh)'}}>
+          <div className="navbar-home" style={{height: 'calc(100vh - 4vh)'}}>
             {this.stocks()}
           </div>
         )
       } else {
         return(
-          <div className="navbar-portfolio" style={{height: 'calc(100vh - 4vh)'}}>
+          <div className="navbar-home" style={{height: 'calc(100vh - 4vh)'}}>
             <div className="ui container portfolio-display">
               <PortfolioDisplay stock={this.state.selectedStock} upToDate={this.state.upToDateStockInfo}/>
             </div>
