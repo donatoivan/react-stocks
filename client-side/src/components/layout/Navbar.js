@@ -47,32 +47,23 @@ const Navbar = (props) => {
     )
   } else {
     return(
-      <div className="ui secondary pointing menu nav">
-        <Link to="/" className="item link">
-          Home
-        </Link>
-        <Link to="/register" className="item link">
-          Register
-        </Link>
-        {/* <Link to="/login" className="item">
-          Login
-        </Link>  */}
-        {/* <Link to="/portfolio" className="item">
-          Portfolio
-        </Link>
-        <Link to="/buy" className="item">
-          Buy
-        </Link>
-        <Link to="/sell" className="item">
-          Sell
-        </Link>  */}
-        <div className="right menu header">
-          <Link to="/login" onClick={props.logout} className="ui item link">
-            Login
-          </Link>
-        </div>
-      </div>
+      null
     )
+  //   return(
+  //     <div>
+  //       {/* <Link to="/" className="item link">
+  //         Home
+  //       </Link>
+  //       <Link to="/register" className="item link">
+  //         Register
+  //       </Link>
+  //       <div className="right menu header">
+  //         <Link to="/login" onClick={props.logout} className="ui item link">
+  //           Login
+  //         </Link>
+  //       </div> */}
+  //     </div>
+  //   )
   }
 }
 

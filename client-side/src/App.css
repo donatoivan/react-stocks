@@ -1,17 +1,56 @@
-.login-form {
-  margin-top: 45px;
+.login-page-main {
+  display: flex;
+  align-items: center
+}
+
+.left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #9D50BB;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6E48AA, #9D50BB);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6E48AA, #9D50BB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.welcome {
+  margin-bottom: 20px !important;
+}
+
+.font-purple {
+  color: #575aa7 !important;
+}
+
+.font-green {
+  color: #43ddc1 !important;
+}
+
+.button-green {
+  background-color: #43ddc1 !important;
+  color: white !important;
 }
 
 .main-header {
   font-size: 40px !important;
 }
 
-.font-white {
-  color: #FFF !important;
+.login-header {
+  margin-bottom: 50px;
 }
 
-.nav {
-  background-color: #c475f6 !important;
+.font-white {
+  color: #FFF !important;
 }
 
 .link {
@@ -24,7 +63,7 @@
 }
 
 .purple {
-  background-color: #c475f6 !important;
+  /* background-color: #c475f6 !important; */
 }
 
 .register {
@@ -75,9 +114,13 @@
 }
 
 .error-messages {
-  border: 1px solid white;
+  border: 1px solid #575aa7;
   border-radius: 3px;
   padding: 10px;
+}
+
+.register-errors {
+  width: 190px !important;
 }
 
 .portfolio-display {
@@ -96,7 +139,7 @@
 }
 
 .sidebar {
-  height: 80 %;
+  height: 80%;
   width: 160px;
   position: fixed;
   z-index: 1;
@@ -119,4 +162,29 @@
   margin-left: 160px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
+}
+
+.useFontAwesomeFamily::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900;
+}
+.useFontAwesomeFamily:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900;
+}
+.useFontAwesomeFamily::-moz-placeholder { /* Mozilla Firefox 19+ */
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900;
+}
+.useFontAwesomeFamily:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900;
+}
+.useFontAwesomeFamily::-ms-input-placeholder { /* Microsoft Edge */
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900;
+}
+.useFontAwesomeFamily::placeholder { /* Most modern browsers */
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900;
 }
