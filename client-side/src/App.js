@@ -1,16 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Routes from './Routes';
 import Navbar from './components/layout/Navbar';
-import Landing from './components/layout/Landing';
-import Login from './components/auth/Login';
-import Register from './components/auth/Register';
-import Buy from './components/Buy/Buy';
-import Sell from './components/Sell/Sell';
-import Portfolio from './components/Portfolio/Portfolio';
-import Home from './components/Home';
-import History from './components/History/History';
 import axios from 'axios';
-
 import './App.css';
 
 class App extends React.Component {
@@ -84,41 +75,10 @@ class App extends React.Component {
     const { authentication, errors } = this.state
     const { register, login, logout } = this
     return(
-      <BrowserRouter>
-        {/* <div className="ui container"> */}
+        <div>
           <Navbar authentication={authentication} logout={logout} />
-          {/* <Route exact path="/" render={(history) => {
-            return <Landing authentication={authentication} history={history} />
-          }}/> */}
-          {/* <section className="ui container"> */}
-            <Switch>
-              <Route exact path="/portfolio" render={(history) => {
-                return <Portfolio authentication={authentication} history={history} />
-              }} />
-              <Route exact path="/buy" render={(history) => {
-              return <Buy authentication={authentication} history={history}/> 
-              }} />
-              <Route exact path="/sell" render={(history) => {
-                return <Sell authentication={authentication} history={history} />
-              }} />
-              <Route exact path="/home" render={(history) => {
-                return <Home authentication={authentication} history={history} />
-              }} />
-              <Route exact path="/history" render={(history) => {
-                return <History authentication={authentication} history={history}/>
-              }}/>
-              {/* <section className="ui purple" style={{height: 'calc(100vh - 6vh)'}}> */}
-                <Route exact path="/register" render={(history) => {
-                  return <Register register={register} authentication={authentication} history={history} errors={errors}/>
-                }} />
-                <Route exact path="/" render={(history) => {
-                  return <Login login={login} authentication={authentication} history={history} errors={errors}/>
-                }}
-                />
-              {/* </section> */}
-            </Switch>
-        {/* </div> */}
-      </BrowserRouter>
+          <Routes authentication={authentication} logout={logout} errors={errors} register={register} login={login}/>
+        </div>
     )
   }
 };
